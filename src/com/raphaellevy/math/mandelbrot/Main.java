@@ -1,7 +1,7 @@
 package com.raphaellevy.math.mandelbrot;
 
 import com.raphaellevy.math.ComplexDouble;
-import com.raphaellevy.math.graphics.Graphics;
+import com.raphaellevy.math.graphics.MathGraphics;
 
 import static com.raphaellevy.math.ComplexDouble.addCD;
 import static com.raphaellevy.math.ComplexDouble.zero;
@@ -10,7 +10,7 @@ import static com.raphaellevy.math.ComplexDouble.zero;
  * Created by raffa on 5/30/16.
  */
 public class Main {
-    static final double ESCAPE = 20;
+    static final double ESCAPE = 2;
     public static void main(String args[]) {
 
 //        ComplexDouble x = new ComplexDouble(1,1);
@@ -21,7 +21,8 @@ public class Main {
 //            z = f(x,z);
 //            z.println();
 //        }
-        Graphics.plotComplexSet(Main::isIn);
+        MathGraphics gr = MathGraphics.init(1250,750);
+        gr.plotComplexSet(Main::isIn);
     }
     public static boolean isIn(ComplexDouble v) {
         ComplexDouble z = zero;
