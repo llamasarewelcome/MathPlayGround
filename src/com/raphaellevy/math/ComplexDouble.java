@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2016 Raphael Levy. All Rights Reserved.
+ */
+
 package com.raphaellevy.math;
 
 /**

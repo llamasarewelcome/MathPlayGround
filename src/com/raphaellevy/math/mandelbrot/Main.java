@@ -1,7 +1,11 @@
+/*
+ * Copyright (c) 2016 Raphael Levy. All Rights Reserved.
+ */
+
 package com.raphaellevy.math.mandelbrot;
 
 import com.raphaellevy.math.ComplexDouble;
-import com.raphaellevy.math.graphics.MathGraphics;
+import com.raphaellevy.math.graphics.ComplexGraphics;
 
 import static com.raphaellevy.math.ComplexDouble.addCD;
 import static com.raphaellevy.math.ComplexDouble.zero;
@@ -21,8 +25,9 @@ public class Main {
 //            z = f(x,z);
 //            z.println();
 //        }
-        MathGraphics gr = MathGraphics.init(1250,750);
+        ComplexGraphics gr = ComplexGraphics.init(1250,750);
         gr.plotComplexSet(Main::isIn);
+
     }
     public static boolean isIn(ComplexDouble v) {
         ComplexDouble z = zero;
